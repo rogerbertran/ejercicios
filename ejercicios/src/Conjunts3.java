@@ -45,7 +45,7 @@ public class Conjunts3 {
 
 		System.out.println("LIFO CILINDRADA");
 
-		// shows the TreeSet sorted by the cilindrada by the lifo method
+		// shows the TreeSet sorted with the displacement by the lifo method
 
 		for (int i = 0; i <= carSet1.size(); i++) {
 			System.out.println(carSet1.last());
@@ -57,7 +57,7 @@ public class Conjunts3 {
 
 		System.out.println("LIFO POT. FISC");
 		
-		// shows the TreeSet sorted by the F.P. by the lifo method
+		// shows the TreeSet sorted with the pot. fisc. by the lifo method
 		for (int i = 0; i <= carSet3.size(); i++) {
 			System.out.println(carSet3.last());
 			carSet3.remove(carSet3.last());
@@ -68,7 +68,7 @@ public class Conjunts3 {
 
 		System.out.println("FIFO CILINDRADA");
 
-		// shows the TreeSet sorted by the cilindrada by the fifo method
+		// shows the TreeSet sorted with the displacement by the fifo method
 		for (int i = 0; i <= carSet2.size(); i++) {
 			System.out.println(carSet2.first());
 			carSet2.remove(carSet2.first());
@@ -79,7 +79,7 @@ public class Conjunts3 {
 
 		System.out.println("FIFO POT. FISC.");
 
-		// shows the TreeSet sorted by the F.P. by the fifo method
+		// shows the TreeSet sorted with the pot. fisc. by the fifo method
 		for (int i = 0; i <= carSet4.size(); i++) {
 			System.out.println(carSet4.first());
 			carSet4.remove(carSet4.first());
