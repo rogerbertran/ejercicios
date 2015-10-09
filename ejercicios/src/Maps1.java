@@ -15,12 +15,12 @@ public class Maps1 {
 		map.put(new String("9234 BHG"), new Car("Hyundai", "Santa Fe", 3000, 6));
 		map.put(new String("9216 CKK"), new Car("Hyundai", "Accent", 1500, 4));
 		
-		/**boolean resultat = map.put(new String("9216 CKK"), new Car("Hyundai", "Accent", 1500, 4));
-		if (resultat) {
-			System.out.println("Hyundai afegit");
-		} else {
+		Car resultat = map.put(new String("9216 CKK"), new Car("Hyundai", "Accent", 1500, 4));
+		if (resultat == null) {
 			System.out.println("Hyundai no afegit");
-		}*/
+		} else {
+			System.out.println("Hyundai afegit");
+		}
 		
 		// Show them
 		for(Map.Entry<String, Car> entry : map.entrySet()) {
