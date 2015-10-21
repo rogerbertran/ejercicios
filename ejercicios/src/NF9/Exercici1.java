@@ -4,8 +4,7 @@ public class Exercici1 {
 	public static void main(String s[]) throws ArrayIndexOutOfBoundsException {
 		try {
 			funcio1();
-		}
-		finally {
+		} finally {
 			System.out.println("codi de finally");
 		}
 	}
