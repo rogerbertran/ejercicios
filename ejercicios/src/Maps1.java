@@ -22,6 +22,8 @@ public class Maps1 {
 			System.out.println("Hyundai afegit");
 		}
 		
+		
+		
 		// Show them
 		for(Map.Entry<String, Car> entry : map.entrySet()) {
 			  System.out.println(entry.getKey() + " => " + entry.getValue());
