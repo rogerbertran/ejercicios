@@ -13,15 +13,19 @@ public class Exercici2 {
 
 	static void funcio1() {
 		try {
-			// 2.1 no advierte sobre SecurityException porque es un RunTimeException
-			FileOutputStream f = new FileOutputStream("./test.txt");
+			// 2.1 no advierte sobre SecurityException porque es un
+			// RunTimeException
+			FileOutputStream f = new FileOutputStream("/aaa.txt");
 			try {
-			f.close();
-			System.out.println("despres del close");
-			} catch (IOException i) {
+				f.close();
+				System.out.println("despres del close");
+			} // No entra en el error porque el fichero existe, aunque trates el
+				// error
+			catch (IOException i) {
 				System.out.println("error IOException");
 			}
-		} // No entra en el error porque el fichero existe, aunque trates el error 
+		} // No entra en el error porque el fichero existe, aunque trates el
+			// error
 		catch (FileNotFoundException e) {
 			System.out.println("error FileOutputStream");
 		}
