@@ -1,6 +1,5 @@
 package NF9;
 
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
@@ -8,26 +7,20 @@ public class Exercici2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		funcio1();
+		try {
+			funcio1();
+		} catch (IOException e) {
+			System.out.println("error de fitxer");
+		} catch (SecurityException e) {
+			System.out.println("error de seguretat");
+		}
 	}
 
-	static void funcio1() {
-		try {
-			// 2.1 no advierte sobre SecurityException porque es un
-			// RunTimeException
-			FileOutputStream f = new FileOutputStream("/aaa.txt");
-			try {
-				f.close();
-				System.out.println("despres del close");
-			} // No entra en el error porque el fichero existe, aunque trates el
-				// error
-			catch (IOException i) {
-				System.out.println("error IOException");
-			}
-		} // No entra en el error porque el fichero existe, aunque trates el
-			// error
-		catch (FileNotFoundException e) {
-			System.out.println("error FileOutputStream");
-		}
+	static void funcio1() throws IOException, SecurityException {
+		// 2.1 no advierte sobre SecurityException porque es un
+		// RunTimeException
+		FileOutputStream f = new FileOutputStream("/aaa.txt");
+		f.close();
+		System.out.println("despres del close");
 	}
 }

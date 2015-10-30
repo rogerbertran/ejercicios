@@ -1,19 +1,23 @@
 package NF9;
 
 public class Exercici3 {
-	private static int num1;
-	private static int num2;
+	private static float dividend;
+	private static float divisor;
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		try {
-			divisio(6,0);
-		} catch (Exception e) {
+			divisio(6, 2);
+		} catch (ArithmeticException e) {
 			System.out.println("error, el divisor és 0!");
 		}
 	}
 
-	static void divisio(int num1, int num2) {
-		System.out.println(num1 / num2);
+	static void divisio(float dividend, float divisor) {
+		if (divisor == 0) {
+			throw new ArithmeticException();
+		} else {
+			System.out.println(dividend / divisor);
+		}
 	}
 }
