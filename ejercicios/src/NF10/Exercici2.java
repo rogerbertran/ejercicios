@@ -11,10 +11,11 @@ public class Exercici2 {
 		try {
 			FileInputStream bigfile = null;
 			FileOutputStream baseName = null;
-			int chunkSize;
+			int chunkSize = 15;
+			byte[] copia = new byte[chunkSize];
+			
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
-
 }
